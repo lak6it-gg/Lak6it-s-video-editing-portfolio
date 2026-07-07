@@ -1631,9 +1631,9 @@ body.low-battery-active {
         position: fixed !important;
         bottom: 56px !important;
         top: auto !important;
-        left: calc(50% - 80px) !important;
+        left: calc(50% - 95px) !important;
         z-index: 100 !important;
-        transform: scale(0.72) !important;
+        transform: scale(0.92) !important;
         transform-origin: bottom center !important;
     }
     
@@ -1643,7 +1643,7 @@ body.low-battery-active {
         top: auto !important;
         left: calc(50% + 5px) !important;
         z-index: 100 !important;
-        transform: scale(0.72) !important;
+        transform: scale(0.92) !important;
         transform-origin: bottom center !important;
     }
 
@@ -1673,12 +1673,13 @@ body.low-battery-active {
         height: 100% !important;
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        grid-template-rows: repeat(4, 1fr) !important;
-        gap: 10px !important;
-        padding: 10px 20px !important;
+        grid-template-rows: repeat(4, auto) !important;
+        row-gap: 18px !important;
+        column-gap: 15px !important;
+        padding: 30px 20px 80px 20px !important;
         box-sizing: border-box !important;
         justify-items: center !important;
-        align-items: center !important;
+        align-content: start !important;
         scroll-snap-align: start !important;
     }
 
@@ -1686,12 +1687,34 @@ body.low-battery-active {
         position: relative !important;
         top: auto !important;
         left: auto !important;
+        width: 100px !important;
+        height: 130px !important;
         margin: 0 !important;
         transform: scale(0.95) !important;
         transform-origin: center !important;
         background: transparent !important;
         border: 1px solid transparent !important;
         box-shadow: none !important;
+        border-radius: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 6px !important;
+    }
+    
+    .scattered-projects-grid .desktop-icon .brand-icon-wrapper {
+        width: 54px !important;
+        height: 54px !important;
+        border-radius: 10px !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .scattered-projects-grid .desktop-icon .icon-label {
+        font-size: 12.5px !important;
+        margin-top: 4px !important;
+        font-weight: 800 !important;
+        text-shadow: 1px 1px 1px var(--color-window-bg) !important;
     }
     
     .scattered-projects-grid .large-desktop-icon {
