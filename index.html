@@ -25,16 +25,16 @@
         <div class="top-bar-left">
             <span class="apple-logo" id="about-trigger" onclick="openWindow('window-about')"><i class="fa-brands fa-apple"></i></span>
             <span class="menu-item active-app" id="active-app-name" style="font-weight: 800;">Lak6it's Editing portfolio.</span>
-            <span class="menu-item" onclick="openWindow('window-about')">About</span>
+            <span class="menu-item hide-mobile" onclick="openWindow('window-about')">About</span>
             <span class="menu-item hide-mobile" onclick="openCrashAlert('Premiere Pro')">Premiere</span>
             <span class="menu-item hide-mobile" onclick="openCrashAlert('After Effects')">AfterEffects</span>
             <span class="menu-item hide-mobile" onclick="openCrashAlert('Davinci Resolve')">DaVinci</span>
         </div>
         <div class="top-bar-right">
             <span class="system-mode-indicator" id="system-mode-tag">Mode: Longform</span>
-            <span class="bar-icon hide-mobile" style="cursor:pointer;" onclick="openWifiGame()"><i class="fa-solid fa-wifi"></i></span>
-            <span class="bar-icon hide-mobile"><i class="fa-solid fa-battery-three-quarters"></i></span>
-            <span class="bar-icon" onclick="openWindow('window-terminal')"><i class="fa-solid fa-terminal"></i></span>
+            <span class="bar-icon" style="cursor:pointer;" onclick="openWifiGame()"><i class="fa-solid fa-wifi"></i></span>
+            <span class="bar-icon" style="cursor:pointer;" onclick="toggleBatteryMode()"><i class="fa-solid fa-battery-three-quarters"></i></span>
+            <span class="bar-icon hide-mobile" onclick="openWindow('window-terminal')"><i class="fa-solid fa-terminal"></i></span>
             <span class="date-time" id="top-bar-clock">Tue Jul 7 7:25 PM</span>
         </div>
     </header>
@@ -592,6 +592,28 @@
         </div>
         <div class="alert-footer" style="padding: 10px; background: #eae5df; display: flex; justify-content: flex-end; border-top: 1.5px solid var(--color-border-dark);">
             <button class="mac-btn alert-ok-btn" onclick="closeWindow('window-crash-alert')" style="padding: 4px 16px; border: 2px solid #000; background: #eae5df; font-weight: bold; cursor: pointer; box-shadow: 1px 1px 0 #000;">OK</button>
+        </div>
+    </div>
+
+    <!-- Battery Low Warning Dialog -->
+    <div class="window mac-alert-dialog" id="window-battery-alert" style="display:none; width: 350px; height: 165px; top: 220px; left: calc(50% - 175px); z-index: 999999;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="control close" onclick="closeWindow('window-battery-alert')"></span>
+            </div>
+            <div class="window-title">Battery Status</div>
+        </div>
+        <div class="window-content alert-content-layout" style="padding: 15px; display: flex; gap: 15px; align-items: center; background: #eae5df; border-top: 1.5px solid var(--color-border-dark);">
+            <div class="alert-icon-battery" style="width: 44px; height: 44px; display:flex; align-items:center; justify-content:center; flex-shrink: 0; color: #ff3b30;">
+                <i class="fa-solid fa-battery-quarter" style="font-size: 32px;"></i>
+            </div>
+            <div class="alert-message-text" style="flex:1;">
+                <strong style="display:block; margin-bottom: 6px; font-size:13px; color:#000;">Turning to low battery mode</strong>
+                <span style="font-size:9.5px; color:#555; line-height:1.4; display:block;">Click again to reset the brightness levels</span>
+            </div>
+        </div>
+        <div class="alert-footer" style="padding: 10px; background: #eae5df; display: flex; justify-content: flex-end; border-top: 1.5px solid var(--color-border-dark);">
+            <button class="mac-btn alert-ok-btn" onclick="closeWindow('window-battery-alert')" style="padding: 4px 16px; border: 2px solid #000; background: #eae5df; font-weight: bold; cursor: pointer; box-shadow: 1px 1px 0 #000;">OK</button>
         </div>
     </div>
 

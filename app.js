@@ -562,73 +562,118 @@ function drawScatteredDesktopIcons() {
     container.innerHTML = ''; // Clear existing
     
     const projectsList = PROJECTS[currentMode];
-    
-    // Grid Setup
-    const cols = 5;
-    const rows = 4;
-    const cellIndices = [];
-    for (let i = 0; i < cols * rows; i++) {
-        cellIndices.push(i);
-    }
-    
-    // Shuffle grid cells
-    for (let i = cellIndices.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cellIndices[i], cellIndices[j]] = [cellIndices[j], cellIndices[i]];
-    }
-    
-    // Desktop icons that must be scaled up to stand out immediately
+    const isMobile = window.innerWidth <= 768;
     const largeProjects = ['netflix-india', 'amazon-prime', 'imdb', 'youtube-india', 'samay-raina', 'slayy-point', 'nykaaman', 'tech-burner'];
     
-    projectsList.forEach((proj, idx) => {
-        if (idx >= cellIndices.length) return;
+    if (isMobile) {
+        // Mobile Page Grid (12 apps per page, 3 columns x 4 rows)
+        const appsPerPage = 12;
+        const pagesCount = Math.ceil(projectsList.length / appsPerPage);
         
-        const cellIdx = cellIndices[idx];
-        const cellCol = cellIdx % cols;
-        const cellRow = Math.floor(cellIdx / cols);
-        
-        const baseLeft = (cellCol / cols) * 90 + 5;
-        const baseTop = (cellRow / rows) * 85 + 5;
-        
-        const jitterLeft = (Math.random() * 6) - 3;
-        const jitterTop = (Math.random() * 6) - 3;
-        
-        const finalLeft = baseLeft + jitterLeft;
-        const finalTop = baseTop + jitterTop;
-        
-        const iconDiv = document.createElement('div');
-        iconDiv.className = 'desktop-icon project-scatter-file';
-        iconDiv.style.left = `${finalLeft}%`;
-        iconDiv.style.top = `${finalTop}%`;
-        iconDiv.style.transform = `scale(0)`;
-        
-        // Mark as large if it is a featured project
-        if (largeProjects.includes(proj.id)) {
-            iconDiv.classList.add('large-desktop-icon');
+        for (let p = 0; p < pagesCount; p++) {
+            const pageDiv = document.createElement('div');
+            pageDiv.className = 'mobile-app-page';
+            
+            const startIdx = p * appsPerPage;
+            const endIdx = Math.min(startIdx + appsPerPage, projectsList.length);
+            const pageApps = projectsList.slice(startIdx, endIdx);
+            
+            pageApps.forEach((proj, idx) => {
+                const iconDiv = document.createElement('div');
+                iconDiv.className = 'desktop-icon project-scatter-file';
+                iconDiv.style.transform = `scale(0)`;
+                
+                if (largeProjects.includes(proj.id)) {
+                    iconDiv.classList.add('large-desktop-icon');
+                }
+                
+                iconDiv.dataset.projectId = proj.id;
+                setupIconDragging(iconDiv);
+                
+                iconDiv.innerHTML = `
+                    <div class="brand-icon-wrapper ${proj.class || 'brand-generic'}">
+                        <img src="${proj.logo}" alt="${proj.name}" class="desktop-brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-char" style="display:none;">${proj.char || proj.name[0]}</span>
+                    </div>
+                    <span class="icon-label">${proj.name}</span>
+                `;
+                
+                pageDiv.appendChild(iconDiv);
+                
+                setTimeout(() => {
+                    if (largeProjects.includes(proj.id)) {
+                        iconDiv.style.transform = `scale(1.15)`;
+                    } else {
+                        iconDiv.style.transform = `scale(0.95)`;
+                    }
+                }, idx * 25);
+            });
+            
+            container.appendChild(pageDiv);
+        }
+    } else {
+        // Desktop Scattered Grid (5 columns x 4 rows)
+        const cols = 5;
+        const rows = 4;
+        const cellIndices = [];
+        for (let i = 0; i < cols * rows; i++) {
+            cellIndices.push(i);
         }
         
-        iconDiv.dataset.projectId = proj.id;
-        setupIconDragging(iconDiv);
+        // Shuffle grid cells
+        for (let i = cellIndices.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [cellIndices[i], cellIndices[j]] = [cellIndices[j], cellIndices[i]];
+        }
         
-        iconDiv.innerHTML = `
-            <div class="brand-icon-wrapper ${proj.class || 'brand-generic'}">
-                <img src="${proj.logo}" alt="${proj.name}" class="desktop-brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                <span class="fallback-char" style="display:none;">${proj.char || proj.name[0]}</span>
-            </div>
-            <span class="icon-label">${proj.name}</span>
-        `;
-        
-        container.appendChild(iconDiv);
-        
-        setTimeout(() => {
-            // Apply proper scaling on animation trigger
+        projectsList.forEach((proj, idx) => {
+            if (idx >= cellIndices.length) return;
+            
+            const cellIdx = cellIndices[idx];
+            const cellCol = cellIdx % cols;
+            const cellRow = Math.floor(cellIdx / cols);
+            
+            const baseLeft = (cellCol / cols) * 90 + 5;
+            const baseTop = (cellRow / rows) * 85 + 5;
+            
+            const jitterLeft = (Math.random() * 6) - 3;
+            const jitterTop = (Math.random() * 6) - 3;
+            
+            const finalLeft = baseLeft + jitterLeft;
+            const finalTop = baseTop + jitterTop;
+            
+            const iconDiv = document.createElement('div');
+            iconDiv.className = 'desktop-icon project-scatter-file';
+            iconDiv.style.left = `${finalLeft}%`;
+            iconDiv.style.top = `${finalTop}%`;
+            iconDiv.style.transform = `scale(0)`;
+            
             if (largeProjects.includes(proj.id)) {
-                iconDiv.style.transform = `scale(1.22)`;
-            } else {
-                iconDiv.style.transform = `scale(1)`;
+                iconDiv.classList.add('large-desktop-icon');
             }
-        }, idx * 25);
-    });
+            
+            iconDiv.dataset.projectId = proj.id;
+            setupIconDragging(iconDiv);
+            
+            iconDiv.innerHTML = `
+                <div class="brand-icon-wrapper ${proj.class || 'brand-generic'}">
+                    <img src="${proj.logo}" alt="${proj.name}" class="desktop-brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="fallback-char" style="display:none;">${proj.char || proj.name[0]}</span>
+                </div>
+                <span class="icon-label">${proj.name}</span>
+            `;
+            
+            container.appendChild(iconDiv);
+            
+            setTimeout(() => {
+                if (largeProjects.includes(proj.id)) {
+                    iconDiv.style.transform = `scale(1.22)`;
+                } else {
+                    iconDiv.style.transform = `scale(1)`;
+                }
+            }, idx * 25);
+        });
+    }
 }
 
 // ==========================================================================
@@ -1308,3 +1353,21 @@ if (dockAboutItem) {
 function initColorGradingSlider() {}
 function initAfterEffectsComp() {}
 function initTerminalShell() {}
+
+// ==========================================================================
+// 11. Low Battery Mode Toggle
+// ==========================================================================
+let isLowBatteryMode = false;
+
+function toggleBatteryMode() {
+    isLowBatteryMode = !isLowBatteryMode;
+    const body = document.body;
+    
+    if (isLowBatteryMode) {
+        body.classList.add('low-battery-active');
+        openWindow('window-battery-alert');
+    } else {
+        body.classList.remove('low-battery-active');
+        closeWindow('window-battery-alert');
+    }
+}
