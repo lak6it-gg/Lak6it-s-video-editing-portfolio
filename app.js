@@ -13,7 +13,7 @@ const PROJECTS = {
             softwares: ['Premiere'],
             desc: 'Collaborative promotional review and comedy edit series featuring Tanmay Bhat. Synced multi-cam setup with fast pacing and dialogue accents.',
             logo: 'assets/netflix_logo.png', // netflix.png
-            thumbnail: 'assets/extracted_img_p5_2.jpeg', // netflix.jpg
+            thumbnail: 'assets/netflix.jpg', // netflix.jpg
             class: 'brand-netflix',
             char: 'N'
         },
@@ -25,7 +25,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Edited celebrity talk-shows, behind-the-scenes segments, and interview promos. Synced clean multi-source audio stems.',
             logo: 'assets/imdb.png', // imdb.png
-            thumbnail: 'assets/extracted_img_p6_8.jpeg', // Imdb.jpg
+            thumbnail: 'assets/Imdb_thumb.jpg', // Imdb.jpg
             class: 'brand-imdb',
             char: 'IMDb'
         },
@@ -49,7 +49,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'High-retention storytelling style edit, focusing on snappy typography overlays, micro-sound design, and relatable pacing highlights.',
             logo: 'assets/jesser.png', // jesser logo.jpg
-            thumbnail: 'assets/extracted_img_p2_1.jpeg', // Jesser.jpg
+            thumbnail: 'assets/jesser thum.jpg', // Jesser.jpg
             class: 'brand-generic',
             char: 'Jsr'
         },
@@ -61,7 +61,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'End-to-end long-form YouTube editing. Crafted deep explainers (like the Labubu Craze) with organic stock animations.',
             logo: 'assets/vyre.png', // vyre logo white blue.png
-            thumbnail: 'assets/extracted_img_p3_7.jpeg', // Labubu.jpg
+            thumbnail: 'assets/vyre thum.jpg', // Labubu.jpg
             class: 'brand-vyre',
             char: 'Vyre'
         },
@@ -69,11 +69,11 @@ const PROJECTS = {
             id: 'masters-union',
             name: 'Masters\' Union',
             role: 'Video Editor',
-            links: ['https://www.youtube.com/c/MastersUnion'],
+            links: ['https://drive.google.com/drive/folders/1xBxE7f5_iP83n5zUqT3ox7H53k2h6_WX?usp=sharing'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Corporate academic explainers and student highlight features. Polished sound tracks and clean corporate LUT color profiles.',
             logo: 'assets/mu.png', // mu.png
-            thumbnail: 'assets/extracted_img_p8_8.jpeg', // mu.png
+            thumbnail: 'assets/mu.png', // mu.png
             class: 'brand-generic',
             char: 'MU'
         },
@@ -85,7 +85,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Interactive business case studies explainers, focusing on Groww beating Zerodha and Souled Store business model.',
             logo: 'assets/mesa.png', // mesa-shcool.jpg
-            thumbnail: 'assets/extracted_img_p8_9.jpeg', // Mesa.jpg
+            thumbnail: 'assets/mesa.jpg', // Mesa.jpg
             class: 'brand-generic',
             char: 'Mesa'
         },
@@ -109,7 +109,7 @@ const PROJECTS = {
             softwares: ['Davinci Resolve'],
             desc: 'Lead colorist grading promotional reels. Created moody dark blues and high-contrast skin tones for AI-themed clips.',
             logo: 'assets/endgame.png', // Endgame ai.png
-            thumbnail: 'assets/extracted_img_p10_9.jpeg', // Hans.jpg
+            thumbnail: 'assets/Hans.png', // Hans.jpg
             class: 'brand-ai',
             char: 'Eng'
         },
@@ -181,7 +181,7 @@ const PROJECTS = {
             softwares: ['Premiere'],
             desc: 'Synced dialogue edits for comedy commentary reels, integrating highlight title graphics and pop-ups.',
             logo: 'assets/adit pfp.png', // adit pfp.jpg
-            thumbnail: 'assets/extracted_img_p15_4.jpeg', // adit thumbnail.jpg
+            thumbnail: 'assets/adit thumb.jpg', // adit thumbnail.jpg
             class: 'brand-creative',
             char: 'Adit'
         },
@@ -205,7 +205,7 @@ const PROJECTS = {
             softwares: ['After Effects'],
             desc: 'Handled VFX tracking, stabilization, and asset compositing for a stop-motion paper-animation short film.',
             logo: 'assets/voicenote.png', // voicenote.png
-            thumbnail: 'assets/extracted_img_p18_2.jpeg', // voicenote.png
+            thumbnail: 'assets/voicenote.png', // voicenote.png
             class: 'brand-film',
             char: 'Stop'
         },
@@ -217,7 +217,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Edited "Mere Pyaare Imroz" within the strict 50-hour window. Synced dual-system dialogues, ambient noise filtering, and custom LUT color profiles.',
             logo: 'assets/mere.png', // mere.png
-            thumbnail: 'assets/extracted_img_p18_2.jpeg', // mere.png
+            thumbnail: 'assets/mere 2.png', // mere.png
             class: 'brand-film',
             char: 'IFP'
         },
@@ -229,7 +229,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Full length student movie assembly. Developed film-stock color LUTs, and audio tracks synchronization.',
             logo: 'assets/Ravi mi.png', // Ravi mi.png
-            thumbnail: 'assets/extracted_img_p16_3.jpeg', // Ravi mi.png
+            thumbnail: 'assets/Ravi mi.png', // Ravi mi.png
             class: 'brand-film',
             char: 'Film'
         }
