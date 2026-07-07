@@ -498,6 +498,25 @@ document.addEventListener("DOMContentLoaded", () => {
         setupIconDragging(folder);
     });
     
+    // Close active window when clicking/tapping on negative space outside it (mobile only)
+    document.addEventListener('click', (e) => {
+        const isMobileViewport = window.innerWidth <= 1024;
+        if (!isMobileViewport) return;
+        
+        const activeWin = document.querySelector('.window.active-window');
+        if (!activeWin) return;
+        
+        const wasOutside = !activeWin.contains(e.target);
+        const wasTrigger = e.target.closest('.desktop-icon') || 
+                            e.target.closest('.dock-item') || 
+                            e.target.closest('.bar-icon') || 
+                            e.target.closest('.mode-folder');
+        
+        if (wasOutside && !wasTrigger) {
+            closeWindow(activeWin.id);
+        }
+    });
+    
     // Set Initial Mode
     switchMode('longform');
 });
@@ -770,6 +789,15 @@ function openProjectDetails(projId) {
     });
     
     openWindow('window-project-details');
+    
+    // Block ghost tap/click propagation on mobile viewports
+    const isMobileViewport = window.innerWidth <= 1024;
+    if (isMobileViewport) {
+        win.style.pointerEvents = 'none';
+        setTimeout(() => {
+            win.style.pointerEvents = 'auto';
+        }, 350);
+    }
 }
 
 function playActiveProject() {
