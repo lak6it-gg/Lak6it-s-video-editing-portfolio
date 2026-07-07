@@ -1580,55 +1580,147 @@ body, html {
 
 @media (max-width: 768px) {
     .hide-mobile { display: none !important; }
-    body { overflow-y: auto; }
+    body { overflow: hidden; }
+    
     .desktop-area {
-        height: auto;
-        min-height: calc(100vh - 26px);
-        padding: 10px 10px 100px 10px;
-        overflow-y: auto;
+        position: relative !important;
+        height: calc(100vh - 26px) !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        padding: 0 !important;
     }
     
-    .desktop-folder-toggles {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 20px;
+    /* Center folder links above the dock */
+    #folder-longform {
+        position: absolute !important;
+        bottom: 85px !important;
+        top: auto !important;
+        left: calc(50% - 95px) !important;
+        z-index: 100 !important;
+    }
+    
+    #folder-shortform {
+        position: absolute !important;
+        bottom: 85px !important;
+        top: auto !important;
+        left: calc(50% + 5px) !important;
+        z-index: 100 !important;
     }
 
+    /* Swipeable horizontal projects grid */
     .scattered-projects-grid {
-        position: static;
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        justify-items: center;
+        position: absolute !important;
+        top: 100px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 190px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        gap: 16px !important;
+        padding: 15px 24px !important;
+        box-sizing: border-box !important;
+        pointer-events: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .scattered-projects-grid::-webkit-scrollbar {
+        height: 5px;
+    }
+    .scattered-projects-grid::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .scattered-projects-grid::-webkit-scrollbar-thumb {
+        background: var(--color-border-dark);
+        border-radius: 3px;
     }
 
     .scattered-projects-grid .desktop-icon {
-        position: static !important;
-        width: 85px !important;
-        margin-bottom: 10px;
-        box-shadow: 2px 2px 0 var(--color-border-dark);
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        flex: 0 0 92px !important;
+        height: 112px !important;
+        scroll-snap-align: center !important;
+        margin: 0 !important;
+        box-shadow: 3px 3px 0 var(--color-border-dark) !important;
+        border-radius: 8px !important;
+        background: var(--color-window-bg) !important;
     }
 
-    .window {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        margin-bottom: 20px;
-        display: none;
+    /* Stacking project preview layout vertically on mobile */
+    .project-details-layout.horizontal-layout {
+        flex-direction: column !important;
+        overflow-y: auto !important;
     }
-    .window.active-window { display: flex; }
-    .window-controls .minimize, .window-controls .maximize { display: none; }
     
-    .sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--color-border-dark); }
-    .sidebar-list { display: flex; flex-wrap: wrap; gap: 4px; }
-    .sidebar-list li { margin-bottom: 0; padding: 4px 6px; }
+    .horizontal-meta-wrapper {
+        border-right: none !important;
+        border-bottom: 2px solid var(--color-border-dark) !important;
+        flex: none !important;
+        height: auto !important;
+        padding: 15px !important;
+    }
+    
+    .horizontal-monitor-wrapper {
+        flex: none !important;
+        height: auto !important;
+        padding: 15px !important;
+    }
+    
+    .horizontal-monitor {
+        max-width: 100% !important;
+    }
 
-    .premiere-layout, .ae-layout, .davinci-layout, .ps-layout { flex-direction: column; }
+    /* Modal dialog style absolute windows overlaying everything */
+    .window {
+        position: absolute !important;
+        width: calc(100% - 24px) !important;
+        max-width: 420px !important;
+        left: 12px !important;
+        top: 45px !important;
+        height: 510px !important;
+        z-index: 100000 !important;
+        display: none;
+        box-shadow: 6px 6px 0 var(--color-border-dark) !important;
+    }
+    
+    .window.active-window { 
+        display: flex; 
+    }
+    
+    .window-controls .minimize, .window-controls .maximize { 
+        display: none; 
+    }
+    
+    .main-body {
+        padding: 15px !important;
+    }
+    
+    .sidebar { 
+        width: 100%; 
+        border-right: none; 
+        border-bottom: 2px solid var(--color-border-dark); 
+    }
+    
+    .sidebar-list { 
+        display: flex; 
+        flex-wrap: wrap; 
+        gap: 4px; 
+    }
+    
+    .sidebar-list li { 
+        margin-bottom: 0; 
+        padding: 4px 6px; 
+    }
+
+    .premiere-layout, .ae-layout, .davinci-layout, .ps-layout { 
+        flex-direction: column; 
+    }
+    
     .project-bin, .ae-project-panel, .davinci-sidebar-projects, .ps-tools, .ps-panels {
         width: 100%;
         height: auto;
@@ -1641,9 +1733,30 @@ body, html {
     .motion-path-container { width: 100%; }
     .after-img img { width: 100%; }
     
-    .dock-container { position: fixed; bottom: 8px; width: calc(100% - 16px); }
-    .dock { width: 100%; overflow-x: auto; justify-content: center; border-radius: 8px; }
-    .dock-icon { width: 36px; height: 36px; font-size: 14px; }
-    .dock-item:hover { transform: none; }
-    .dock-separator { height: 30px; }
+    .dock-container { 
+        position: fixed; 
+        bottom: 8px; 
+        width: calc(100% - 16px); 
+    }
+    
+    .dock { 
+        width: 100%; 
+        overflow-x: auto; 
+        justify-content: center; 
+        border-radius: 8px; 
+    }
+    
+    .dock-icon { 
+        width: 36px; 
+        height: 36px; 
+        font-size: 14px; 
+    }
+    
+    .dock-item:hover { 
+        transform: none; 
+    }
+    
+    .dock-separator { 
+        height: 30px; 
+    }
 }
