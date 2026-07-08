@@ -1286,6 +1286,7 @@ body.low-battery-active {
 .mail-icon { background: #ff7675; color: #fff; }
 .instagram-icon { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #fff; }
 .linkedin-icon { background: #0077b5; color: #fff; }
+.whatsapp-icon { background: #25d366; color: #fff; }
 
 /* ==========================================================================
    Cinema / Video Modal Viewer (badges container)
