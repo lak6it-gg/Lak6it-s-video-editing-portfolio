@@ -296,7 +296,7 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DL69cGKzq3l/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Aesthetic street-fashion highlight reels. Handled color grade matching and visual sound sweeps.',
-            logo: 'assets/Iyd.png', // Iyd.jpeg
+            logo: 'assets/iyd.png', // Iyd.jpeg
             thumbnail: 'assets/extracted_img_p7_7.jpeg', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'IYD'
@@ -436,6 +436,74 @@ const PROJECTS = {
     ]
 };
 
+// Project Filters Mapping based on PDFs
+const FILTERS_MAPPING = {
+    // Longform
+    'netflix-india': ['highlights'],
+    'imdb': ['highlights'],
+    'amazon-prime': ['highlights'],
+    'jesser': ['high-prod'],
+    'vyre-long': ['documentary', 'motion-graphics'],
+    'masters-union': ['documentary', 'motion-graphics'],
+    'mesa-long': ['documentary', 'motion-graphics'],
+    'solar-square': ['documentary', 'motion-graphics'],
+    'endgame-ai': ['high-prod'],
+    's8ul-long': ['high-prod'],
+    'tribe-gaming': ['high-prod'],
+    'snax-long': ['highlights'],
+    '8bit-mamba': ['highlights'],
+    'fing-long': ['high-prod'],
+    'adit-long': ['highlights'],
+    'tech-burner': ['documentary', 'motion-graphics'],
+    'stop-motion': ['personal-projects'],
+    'ifp-film': ['personal-projects'],
+    'marathi-film': ['personal-projects'],
+    
+    // Shortform
+    'samay-raina': ['highlights'],
+    'youtube-india': ['highlights'],
+    'nykaaman': ['highlights', 'motion-graphics'],
+    'slayy-point': ['highlights'],
+    'iyd': ['documentary', 'motion-graphics'],
+    'aspora': ['documentary', 'motion-graphics'],
+    'mesa-short': ['documentary', 'motion-graphics'],
+    'gcl': ['high-prod'],
+    'rj-dheeraj': ['highlights'],
+    'darshan': ['highlights'],
+    'vyre-short': ['documentary', 'motion-graphics'],
+    'scout-short': ['highlights'],
+    'z47-moments': ['documentary', 'motion-graphics'],
+    'agastya-short': ['highlights'],
+    'ayush-short': ['documentary', 'motion-graphics'],
+    'theorist': ['documentary', 'motion-graphics']
+};
+
+// Inject filters property into PROJECTS database objects dynamically
+for (const mode in PROJECTS) {
+    PROJECTS[mode].forEach(proj => {
+        proj.filters = FILTERS_MAPPING[proj.id] || [];
+    });
+}
+
+let activeFilter = 'all';
+
+function setProjectFilter(filterType) {
+    activeFilter = filterType;
+    
+    // Update active class on filter buttons
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+        const clickAttr = btn.getAttribute('onclick');
+        if (clickAttr && clickAttr.includes(`'${filterType}'`)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
+    // Redraw icons with the active filter applied
+    drawScatteredDesktopIcons();
+}
+
 // Error Messages for Software Crashes
 const CRASH_ERRORS = {
     'Premiere Pro': {
@@ -519,6 +587,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Set Initial Mode
     switchMode('longform');
+    
+    // Welcome Showreel Dialog
+    initWelcomeWindow();
 });
 
 // ==========================================================================
@@ -558,6 +629,17 @@ function initClock() {
 function switchMode(mode) {
     currentMode = mode;
     
+    // Reset active category filter when switching folder modes
+    activeFilter = 'all';
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+        const clickAttr = btn.getAttribute('onclick');
+        if (clickAttr && clickAttr.includes("'all'")) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    
     // Highlight folder icons
     document.querySelectorAll('.mode-folder').forEach(f => f.classList.remove('active-mode'));
     const activeFolder = document.getElementById(`folder-${mode}`);
@@ -580,7 +662,10 @@ function drawScatteredDesktopIcons() {
     
     container.innerHTML = ''; // Clear existing
     
-    const projectsList = PROJECTS[currentMode];
+    let projectsList = PROJECTS[currentMode];
+    if (activeFilter !== 'all') {
+        projectsList = projectsList.filter(proj => proj.filters.includes(activeFilter));
+    }
     const isMobile = window.innerWidth <= 768;
     const largeProjects = ['netflix-india', 'amazon-prime', 'imdb', 'youtube-india', 'samay-raina', 'slayy-point', 'nykaaman', 'tech-burner'];
     
@@ -1167,6 +1252,16 @@ function closeWindow(windowId) {
     if (windowId === 'window-wifi-dino' && dinoGameInstance) {
         dinoGameInstance.stop();
     }
+    
+    // Welcome Showreel window cleanup
+    if (windowId === 'window-welcome') {
+        if (welcomeTimeout) {
+            clearTimeout(welcomeTimeout);
+            welcomeTimeout = null;
+        }
+        const iframe = document.getElementById('welcome-iframe');
+        if (iframe) iframe.src = "";
+    }
 }
 
 function minimizeWindow(windowId) {
@@ -1399,3 +1494,52 @@ function toggleBatteryMode() {
         closeWindow('window-battery-alert');
     }
 }
+
+// ==========================================================================
+// 12. Welcome Showreel Window
+// ==========================================================================
+let welcomeTimeout = null;
+
+function initWelcomeWindow() {
+    const isMobile = window.innerWidth <= 1024;
+    const win = document.getElementById('window-welcome');
+    if (!win) return;
+    
+    // Dynamic sizing for welcome popup based on format
+    if (isMobile) {
+        win.style.width = 'calc(100% - 24px)';
+        win.style.height = '340px';
+        win.style.left = '12px';
+        win.style.top = 'calc(50% - 170px)';
+    } else {
+        win.style.width = '480px';
+        win.style.height = '380px';
+        win.style.left = 'calc(50% - 240px)';
+        win.style.top = 'calc(50% - 190px)';
+    }
+    
+    // Load iframe src and show window
+    const iframe = document.getElementById('welcome-iframe');
+    if (iframe) {
+        iframe.src = "https://www.youtube-nocookie.com/embed/rt-aK0KAhlg?autoplay=1&mute=1&enablejsapi=1";
+    }
+    
+    openWindow('window-welcome');
+    
+    // Auto-close welcome window after 30 seconds
+    welcomeTimeout = setTimeout(() => {
+        closeWindow('window-welcome');
+    }, 30000);
+}
+
+// Explicitly export window-bound functions globally to avoid reference errors on GitHub hosting
+window.openWindow = openWindow;
+window.closeWindow = closeWindow;
+window.minimizeWindow = minimizeWindow;
+window.toggleBatteryMode = toggleBatteryMode;
+window.switchMode = switchMode;
+window.openProjectDetails = openProjectDetails;
+window.openCrashAlert = openCrashAlert;
+window.openWifiGame = openWifiGame;
+window.initWelcomeWindow = initWelcomeWindow;
+window.setProjectFilter = setProjectFilter;

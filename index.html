@@ -61,6 +61,16 @@
 
 
 
+        <!-- Project Category Filters -->
+        <div class="project-filter-bar" id="project-filter-bar">
+            <button class="filter-pill active" onclick="setProjectFilter('all')">All Projects</button>
+            <button class="filter-pill" onclick="setProjectFilter('documentary')">Documentary Edit</button>
+            <button class="filter-pill" onclick="setProjectFilter('high-prod')">High Production Edits</button>
+            <button class="filter-pill" onclick="setProjectFilter('motion-graphics')">Motion Graphics</button>
+            <button class="filter-pill" onclick="setProjectFilter('highlights')">Highlights / Upbeat</button>
+            <button class="filter-pill" onclick="setProjectFilter('personal-projects')">Short Films</button>
+        </div>
+
         <!-- Scattered Dynamic Project Icons Container -->
         <div class="scattered-projects-grid" id="scattered-projects-container">
             <!-- Dynamically populated in app.js -->
@@ -592,6 +602,30 @@
         </div>
         <div class="alert-footer" style="padding: 10px; background: #eae5df; display: flex; justify-content: flex-end; border-top: 1.5px solid var(--color-border-dark);">
             <button class="mac-btn alert-ok-btn" onclick="closeWindow('window-crash-alert')" style="padding: 4px 16px; border: 2px solid #000; background: #eae5df; font-weight: bold; cursor: pointer; box-shadow: 1px 1px 0 #000;">OK</button>
+        </div>
+    </div>
+
+    <!-- Welcome Showreel Window -->
+    <div class="window window-resizable" id="window-welcome" style="display:none; width: 480px; height: 380px; z-index: 1000000;">
+        <div class="window-header">
+            <div class="window-controls">
+                <span class="control close" onclick="closeWindow('window-welcome')"></span>
+            </div>
+            <div class="window-title">Welcome</div>
+        </div>
+        <div class="window-content" style="background:#eae5df; padding: 15px; display:flex; flex-direction:column; gap:10px; border-top:1.5px solid var(--color-border-dark); height: calc(100% - 26px); overflow-y:auto;">
+            <div class="welcome-header-text" style="font-weight: 900; font-size: 14px; text-align: center; color: #000;">
+                Welcome to Lakshit's video editing portfolio
+            </div>
+            
+            <div class="video-mock-container" style="flex:1; border: 2.5px solid #000; background: #000; position:relative; overflow:hidden; min-height: 180px;">
+                <iframe id="welcome-iframe" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+            </div>
+            
+            <div class="welcome-footer-text" style="font-size: 10.5px; line-height: 1.4; color: #333; text-align: center; font-weight: bold; margin-top: 5px;">
+                <a href="https://youtu.be/rt-aK0KAhlg" target="_blank" style="color: var(--color-accent-blue); text-decoration: underline; display: block; margin-bottom: 6px; font-size: 11px;">Watch directly on YouTube</a>
+                This is my latest showreel, you can click the cross button to skip watching and directly dive into the portfolio!
+            </div>
         </div>
     </div>
 
