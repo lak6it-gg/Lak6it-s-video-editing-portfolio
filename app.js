@@ -13,7 +13,7 @@ const PROJECTS = {
             softwares: ['Premiere'],
             desc: 'Collaborative promotional review and comedy edit series featuring Tanmay Bhat. Synced multi-cam setup with fast pacing and dialogue accents.',
             logo: 'assets/netflix_logo.webp', // netflix.webp
-            thumbnail: 'assets/netflix.webp', // netflix.webp
+            thumbnail: 'assets/netflix thumb.webp', // netflix.webp
             class: 'brand-netflix',
             char: 'N'
         },
@@ -85,7 +85,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Interactive business case studies explainers, focusing on Groww beating Zerodha and Souled Store business model.',
             logo: 'assets/mesa.webp', // mesa-shcool.jpg
-            thumbnail: 'assets/mesa.webp', // Mesa.jpg
+            thumbnail: 'assets/mesa thumb2.webp', // Mesa.jpg
             class: 'brand-generic',
             char: 'Mesa'
         },
@@ -296,7 +296,7 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DL69cGKzq3l/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Aesthetic street-fashion highlight reels. Handled color grade matching and visual sound sweeps.',
-            logo: 'assets/Iyd.png', // Iyd.jpeg
+            logo: 'assets/yd.webp', // Iyd.jpeg
             thumbnail: 'assets/extracted_img_p7_7.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'IYD'
