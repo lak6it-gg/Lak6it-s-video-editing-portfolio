@@ -24,7 +24,7 @@
     <header class="top-bar" id="top-bar">
         <div class="top-bar-left">
             <span class="apple-logo" id="about-trigger" onclick="openWindow('window-about')"><i class="fa-brands fa-apple"></i></span>
-            <span class="menu-item active-app" id="active-app-name" style="font-weight: 800;">Lak6it's Editing portfolio.</span>
+            <span class="menu-item active-app" id="active-app-name" style="font-weight: 800; cursor: pointer;" onclick="openWindow('window-about')">Lak6it's portfolio</span>
             <span class="menu-item hide-mobile" onclick="openWindow('window-about')">About</span>
             <span class="menu-item hide-mobile" onclick="openCrashAlert('Premiere Pro')">Premiere</span>
             <span class="menu-item hide-mobile" onclick="openCrashAlert('After Effects')">AfterEffects</span>
@@ -34,7 +34,7 @@
             <span class="system-mode-indicator" id="system-mode-tag">Mode: Longform</span>
             <span class="bar-icon" style="cursor:pointer;" onclick="openWifiGame()"><i class="fa-solid fa-wifi"></i></span>
             <span class="bar-icon" style="cursor:pointer;" onclick="toggleBatteryMode()"><i class="fa-solid fa-battery-three-quarters"></i></span>
-            <span class="bar-icon hide-mobile" onclick="openWindow('window-terminal')"><i class="fa-solid fa-terminal"></i></span>
+            <span class="bar-icon" style="cursor:pointer;" onclick="openWindow('window-terminal')"><i class="fa-solid fa-terminal"></i></span>
             <span class="date-time" id="top-bar-clock">Tue Jul 7 7:25 PM</span>
         </div>
     </header>
@@ -92,7 +92,7 @@
 
                 <main class="main-body scrollable">
                     <div class="about-hero">
-                        <img src="assets/profile.png" alt="Lakshit Avatar" class="profile-avatar">
+                        <img src="assets/profile.webp" alt="Lakshit Avatar" class="profile-avatar">
                         <div class="about-hero-text">
                             <h2 class="serif-title">Hello, I'm Lakshit</h2>
                             <p class="role-badge">Video Editor & Creative Director</p>
@@ -122,6 +122,23 @@
                             <span class="tag">Adit Minocha</span>
                             <span class="tag">Snax Gaming</span>
                             <span class="tag">Scout</span>
+                        </div>
+                        
+                        <h4 class="section-heading">Skills & Expertise</h4>
+                        <div class="brand-tags skills-tags" style="margin-top:8px; margin-bottom:15px;">
+                            <span class="tag">Storytelling</span>
+                            <span class="tag">Motion Graphics</span>
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">Sound Design</span>
+                            <span class="tag">Content Planning</span>
+                            <span class="tag">Adobe Suite</span>
+                            <span class="tag">Color Grading</span>
+                            <span class="tag">Davinci Resolve</span>
+                            <span class="tag">Website Design</span>
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Pro Tools Intro</span>
+                            <span class="tag">Videography</span>
+                            <span class="tag" style="flex: 1 0 100%; text-align: center;">AI Tools: Kling, Veo3, Runway ML, Seedance, Claude, Comfy UI workflows</span>
                         </div>
                         
                         <h4 class="section-heading">Work Experience</h4>

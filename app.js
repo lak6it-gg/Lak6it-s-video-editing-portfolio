@@ -12,8 +12,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/watch?v=qD1S_pEa6v0'],
             softwares: ['Premiere'],
             desc: 'Collaborative promotional review and comedy edit series featuring Tanmay Bhat. Synced multi-cam setup with fast pacing and dialogue accents.',
-            logo: 'assets/netflix_logo.png', // netflix.png
-            thumbnail: 'assets/netflix.jpg', // netflix.jpg
+            logo: 'assets/netflix_logo.webp', // netflix.webp
+            thumbnail: 'assets/netflix.webp', // netflix.webp
             class: 'brand-netflix',
             char: 'N'
         },
@@ -24,8 +24,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLfXmncuKJOf8'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Edited celebrity talk-shows, behind-the-scenes segments, and interview promos. Synced clean multi-source audio stems.',
-            logo: 'assets/imdb.png', // imdb.png
-            thumbnail: 'assets/Imdb_thumb.jpg', // Imdb.jpg
+            logo: 'assets/imdb.webp', // imdb.webp
+            thumbnail: 'assets/Imdb_thumb.webp', // Imdb.jpg
             class: 'brand-imdb',
             char: 'IMDb'
         },
@@ -36,8 +36,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/watch?v=g6pLqDeeUsM'],
             softwares: ['Premiere'],
             desc: 'Promotional comedy features for Prime Mates series, cutting highlight segments with audio timing cues.',
-            logo: 'assets/prime.png', // apv.png
-            thumbnail: 'assets/amazon thumb.jpg', // prime.jpg
+            logo: 'assets/prime.webp', // apv.png
+            thumbnail: 'assets/amazon thumb.webp', // prime.jpg
             class: 'brand-amazon',
             char: 'amzn'
         },
@@ -48,8 +48,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLErlt-n2-Umo'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'High-retention storytelling style edit, focusing on snappy typography overlays, micro-sound design, and relatable pacing highlights.',
-            logo: 'assets/jesser.png', // jesser logo.jpg
-            thumbnail: 'assets/jesser thum.jpg', // Jesser.jpg
+            logo: 'assets/jesser.webp', // jesser logo.jpg
+            thumbnail: 'assets/jesser thum.webp', // Jesser.jpg
             class: 'brand-generic',
             char: 'Jsr'
         },
@@ -60,8 +60,8 @@ const PROJECTS = {
             links: ['https://youtube.com/playlist?list=PLeS6iBxWp8ck&si=a7SVDCzCWWXEcn5y'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'End-to-end long-form YouTube editing. Crafted deep explainers (like the Labubu Craze) with organic stock animations.',
-            logo: 'assets/vyre.png', // vyre logo white blue.png
-            thumbnail: 'assets/vyre thum.jpg', // Labubu.jpg
+            logo: 'assets/vyre.webp', // vyre logo white blue.png
+            thumbnail: 'assets/vyre thum.webp', // Labubu.jpg
             class: 'brand-vyre',
             char: 'Vyre'
         },
@@ -72,8 +72,8 @@ const PROJECTS = {
             links: ['https://drive.google.com/drive/folders/1xBxE7f5_iP83n5zUqT3ox7H53k2h6_WX?usp=sharing'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Corporate academic explainers and student highlight features. Polished sound tracks and clean corporate LUT color profiles.',
-            logo: 'assets/mu.png', // mu.png
-            thumbnail: 'assets/mu.png', // mu.png
+            logo: 'assets/mu.webp', // mu.webp
+            thumbnail: 'assets/mu.webp', // mu.webp
             class: 'brand-generic',
             char: 'MU'
         },
@@ -84,8 +84,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLOOG84MPf3LA'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Interactive business case studies explainers, focusing on Groww beating Zerodha and Souled Store business model.',
-            logo: 'assets/mesa.png', // mesa-shcool.jpg
-            thumbnail: 'assets/mesa.jpg', // Mesa.jpg
+            logo: 'assets/mesa.webp', // mesa-shcool.jpg
+            thumbnail: 'assets/mesa.webp', // Mesa.jpg
             class: 'brand-generic',
             char: 'Mesa'
         },
@@ -96,8 +96,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLZVpx5yo4mnw'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Explainer videos detailing solar pricing models, combining animated physical solar models with dynamic screen trackers.',
-            logo: 'assets/solar.png', // solar sq.png
-            thumbnail: 'assets/extracted_img_p10_8.jpeg', // solar.jpg
+            logo: 'assets/solar.webp', // solar sq.png
+            thumbnail: 'assets/extracted_img_p10_8.webp', // solar.jpg
             class: 'brand-generic',
             char: 'Solar'
         },
@@ -108,8 +108,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/reel/DVrXEy0EwB2/'],
             softwares: ['Davinci Resolve'],
             desc: 'Lead colorist grading promotional reels. Created moody dark blues and high-contrast skin tones for AI-themed clips.',
-            logo: 'assets/endgame.png', // Endgame ai.png
-            thumbnail: 'assets/Hans.png', // Hans.jpg
+            logo: 'assets/endgame.webp', // Endgame ai.png
+            thumbnail: 'assets/Hans.webp', // Hans.jpg
             class: 'brand-ai',
             char: 'Eng'
         },
@@ -120,8 +120,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/watch?si=G1QLQ4Wj3dJqZMnv&v=t_3iE69pSq0&feature=youtu.be'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'High-energy esports reaction logs, syncing custom game overlays, zoom keyframes, and soundboard effects.',
-            logo: 'assets/s8ul_logo.png', // s8.png
-            thumbnail: 'assets/extracted_img_p14_4.jpeg', // s8ul.jpg
+            logo: 'assets/s8ul_logo.webp', // s8.webp
+            thumbnail: 'assets/extracted_img_p14_4.webp', // s8ul.jpg
             class: 'brand-gaming',
             char: 'S8UL'
         },
@@ -132,8 +132,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/watch?si=GI8tD5rf05-ffYfE&v=dLGkI12BI_U&feature=youtu.be'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Fast-paced gaming commentary logs, balancing game audio feeds, vocal stems, and comedic zoom edits.',
-            logo: 'assets/tribe.png', // tribe.png
-            thumbnail: 'assets/extracted_img_p15_2.jpeg', // tribe thumb.jpg
+            logo: 'assets/tribe.webp', // tribe.webp
+            thumbnail: 'assets/extracted_img_p15_2.webp', // tribe thumb.jpg
             class: 'brand-gaming',
             char: 'Trb'
         },
@@ -144,8 +144,8 @@ const PROJECTS = {
             links: ['https://youtube.com/watch?si=3ixVGyz3ViQSoBDC&v=bm2dnWVSLIo&feature=youtu.be'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Esports travel vlogs and tournament digests, matching clean audio transitions with documentary pacing.',
-            logo: 'assets/snax pfp.png', // snax pfp.jpg
-            thumbnail: 'assets/snax thumb.jpg', // snax thumb.jpg
+            logo: 'assets/snax pfp.webp', // snax pfp.jpg
+            thumbnail: 'assets/snax thumb.webp', // snax thumb.webp
             class: 'brand-gaming',
             char: 'Snx'
         },
@@ -156,8 +156,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/watch?v=-tfN2hugZ9c'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Syncing pizza challenge vlogs, multi-camera audio levels, highlight cards, and fast soundboard effects.',
-            logo: 'assets/mamba pfp.png', // mamba pfp.jpeg
-            thumbnail: 'assets/extracted_img_p14_2.jpeg', // mamba thumb.jpg
+            logo: 'assets/mamba pfp.webp', // mamba pfp.jpeg
+            thumbnail: 'assets/extracted_img_p14_2.webp', // mamba thumb.jpg
             class: 'brand-gaming',
             char: '8bit'
         },
@@ -168,8 +168,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLV8qWVSBr7m4'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Mystery and dark narrative documentary reviews, combining suspenseful score swells, low lighting color LUTs, and typography headers.',
-            logo: 'assets/fing pfp.png', // fing pfp.jpg
-            thumbnail: 'assets/extracted_img_p15_3.jpeg', // fing pfp.jpg
+            logo: 'assets/fing pfp.webp', // fing pfp.jpg
+            thumbnail: 'assets/extracted_img_p15_3.webp', // fing pfp.jpg
             class: 'brand-creative',
             char: 'Fing'
         },
@@ -180,8 +180,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLwjLif3y8Kn8PgEEPX0h1BgrZ5U6Juvdv'],
             softwares: ['Premiere'],
             desc: 'Synced dialogue edits for comedy commentary reels, integrating highlight title graphics and pop-ups.',
-            logo: 'assets/adit pfp.png', // adit pfp.jpg
-            thumbnail: 'assets/adit thumb.jpg', // adit thumbnail.jpg
+            logo: 'assets/adit pfp.webp', // adit pfp.jpg
+            thumbnail: 'assets/adit thumb.webp', // adit thumbnail.jpg
             class: 'brand-creative',
             char: 'Adit'
         },
@@ -192,8 +192,8 @@ const PROJECTS = {
             links: ['https://drive.google.com/file/d/11M1icHw_yBUNQ1sbS1O2sTWN354nP4ez/view?usp=sharing'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Created customized composition motion tracks, dynamic logo swipes, and screen overlay assets for tech channels.',
-            logo: 'assets/tech pfp.png', // tech pfp.jpg
-            thumbnail: 'assets/extracted_img_p13_8.jpeg', // techburner thumn.jpg
+            logo: 'assets/tech pfp.webp', // tech pfp.jpg
+            thumbnail: 'assets/extracted_img_p13_8.webp', // techburner thumn.jpg
             class: 'brand-creative',
             char: 'TB'
         },
@@ -204,8 +204,8 @@ const PROJECTS = {
             links: ['https://drive.google.com/file/d/1b6mTD5dz24V3l6ztG2IybVqSYf1GUFHO/view?usp=drive_link'],
             softwares: ['After Effects'],
             desc: 'Handled VFX tracking, stabilization, and asset compositing for a stop-motion paper-animation short film.',
-            logo: 'assets/voicenote.png', // voicenote.png
-            thumbnail: 'assets/voicenote.png', // voicenote.png
+            logo: 'assets/voicenote.webp', // voicenote.webp
+            thumbnail: 'assets/voicenote.webp', // voicenote.webp
             class: 'brand-film',
             char: 'Stop'
         },
@@ -216,8 +216,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/reel/DBBqyKHKM4W/'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Edited "Mere Pyaare Imroz" within the strict 50-hour window. Synced dual-system dialogues, ambient noise filtering, and custom LUT color profiles.',
-            logo: 'assets/mere.png', // mere.png
-            thumbnail: 'assets/mere 2.png', // mere.png
+            logo: 'assets/mere.webp', // mere.webp
+            thumbnail: 'assets/mere 2.webp', // mere.webp
             class: 'brand-film',
             char: 'IFP'
         },
@@ -228,8 +228,8 @@ const PROJECTS = {
             links: ['https://youtu.be/Rtthsi3wTgg'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Full length student movie assembly. Developed film-stock color LUTs, and audio tracks synchronization.',
-            logo: 'assets/Ravi mi.png', // Ravi mi.png
-            thumbnail: 'assets/Ravi mi.png', // Ravi mi.png
+            logo: 'assets/Ravi mi.webp', // Ravi mi.webp
+            thumbnail: 'assets/Ravi mi.webp', // Ravi mi.webp
             class: 'brand-film',
             char: 'Film'
         }
@@ -243,8 +243,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DQ1l1YwkiVV/'],
             softwares: ['Premiere', 'Davinci Resolve'],
             desc: 'High-speed vertical chess stream digests. Synced reaction highlights, soundboards, and dynamic auto-captions.',
-            logo: 'assets/samay.png', // samay.jpg
-            thumbnail: 'assets/samay thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/samay.webp', // samay.jpg
+            thumbnail: 'assets/samay thumb.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'SmR'
         },
@@ -255,8 +255,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DR4OyFEEWzC/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Official short-form promotional edits. Implemented kinetic typography grids, slick transition swipes, and sound effects.',
-            logo: 'assets/yt.png', // yt.jpg
-            thumbnail: 'assets/ytindia_thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/yt.webp', // yt.jpg
+            thumbnail: 'assets/ytindia_thumb.webp', // iyd thumb.jpg
             class: 'brand-youtube',
             char: 'YT'
         },
@@ -272,8 +272,8 @@ const PROJECTS = {
             ],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Men\'s grooming aesthetic promotional campaign. Balanced high-fashion pacing edits, tracking overlays, and glowing color LUTs.',
-            logo: 'assets/nykaaman.png', // nykaaman.webp
-            thumbnail: 'assets/nyka thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/nykaaman.webp', // nykaaman.webp
+            thumbnail: 'assets/nyka thumb.webp', // iyd thumb.jpg
             class: 'brand-netflix',
             char: 'Nyk'
         },
@@ -284,8 +284,8 @@ const PROJECTS = {
             links: ['https://drive.google.com/drive/u/2/folders/1WqJ0VdlxLdsrkZwkwse9BWqUUN4iEtlX'],
             softwares: ['Premiere'],
             desc: 'Slick comedy reaction reels, focusing on zoom accents, punchline pacing, and text animations.',
-            logo: 'assets/slayy_logo.png', // slayy.jpg
-            thumbnail: 'assets/slayy_logo.png', // iyd thumb.jpg
+            logo: 'assets/slayy_logo.webp', // slayy.jpg
+            thumbnail: 'assets/slayy_logo.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'SP'
         },
@@ -297,7 +297,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Aesthetic street-fashion highlight reels. Handled color grade matching and visual sound sweeps.',
             logo: 'assets/Iyd.png', // Iyd.jpeg
-            thumbnail: 'assets/extracted_img_p7_7.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/extracted_img_p7_7.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'IYD'
         },
@@ -308,8 +308,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/reel/DLz8W5ayqjn/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Fast-paced corporate interview reels, balancing clean subtitles, focus-switches, and corporate scoring.',
-            logo: 'assets/aspora.png', // images.png
-            thumbnail: 'assets/extracted_img_p7_8.jpeg', // iyd thumb.jpg
+            logo: 'assets/aspora.webp', // images.webp
+            thumbnail: 'assets/extracted_img_p7_8.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Asp'
         },
@@ -320,8 +320,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLJt5pozGYGK4'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'FinTech short case studies reels, combining custom financial charts and motion graphs.',
-            logo: 'assets/mesa.png', // mesa-shcool.jpg
-            thumbnail: 'assets/mesa thumb.png', // iyd thumb.jpg
+            logo: 'assets/mesa.webp', // mesa-shcool.jpg
+            thumbnail: 'assets/mesa thumb.webp', // iyd thumb.jpg
             class: 'brand-generic',
             char: 'Mesa'
         },
@@ -332,8 +332,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DSkHMbNEUT-/'],
             softwares: ['Davinci Resolve'],
             desc: 'Promotional real estate clip color grades. Balanced outdoor sunlight shadows and saturated highlight detail.',
-            logo: 'assets/gcl.png', // gcl.jpeg
-            thumbnail: 'assets/gcl thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/gcl.webp', // gcl.jpeg
+            thumbnail: 'assets/gcl thumb.webp', // iyd thumb.jpg
             class: 'brand-generic',
             char: 'GCL'
         },
@@ -344,8 +344,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DRR4yPMCOJj/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Radio talk show visual summaries, matching audio waveforms with custom subtitle typography.',
-            logo: 'assets/rj dheeraj.png', // rj dheeraj.jpeg
-            thumbnail: 'assets/dheeraj thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/rj dheeraj.webp', // rj dheeraj.jpeg
+            thumbnail: 'assets/dheeraj thumb.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'RJD'
         },
@@ -356,8 +356,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DMz_wHcJpsH/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'High-tempo music concert recap cut, syncing key frame lens flares and bass drop transitions.',
-            logo: 'assets/darshan.png', // darshan.jpg
-            thumbnail: 'assets/darshan thumb.jpg', // iyd thumb.jpg
+            logo: 'assets/darshan.webp', // darshan.jpg
+            thumbnail: 'assets/darshan thumb.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Drn'
         },
@@ -368,8 +368,8 @@ const PROJECTS = {
             links: ['https://www.youtube.com/playlist?list=PLPNsbSZnF3-M'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'VYRE mobile-first explanation reels, focusing on dopamine loop marketing and consumer psychology.',
-            logo: 'assets/vyre.png', // vyre logo white blue.png
-            thumbnail: 'assets/vyre thumb.png', // iyd thumb.jpg
+            logo: 'assets/vyre.webp', // vyre logo white blue.png
+            thumbnail: 'assets/vyre thumb.webp', // iyd thumb.jpg
             class: 'brand-vyre',
             char: 'Vyre'
         },
@@ -380,8 +380,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/C8EVy06MNeQ/'],
             softwares: ['Premiere'],
             desc: 'Vlog snippets and stream updates for Scout (S8UL), optimizing audio peaks and comedic zoom inserts.',
-            logo: 'assets/scout.png', // scout.jpeg
-            thumbnail: 'assets/extracted_img_p12_5.jpeg', // iyd thumb.jpg
+            logo: 'assets/scout.webp', // scout.jpeg
+            thumbnail: 'assets/extracted_img_p12_5.webp', // iyd thumb.jpg
             class: 'brand-gaming',
             char: 'Sct'
         },
@@ -392,8 +392,8 @@ const PROJECTS = {
             links: ['https://drive.google.com/drive/folders/1Cor415ygr59aIkQTU5ysxs7yDoExpmFT?usp=drive_link'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Matrix Moments interview reels, detailing startup investments with animated title slides.',
-            logo: 'assets/z47.png', // z47.png
-            thumbnail: 'assets/z47.png', // iyd thumb.jpg
+            logo: 'assets/z47.webp', // z47.webp
+            thumbnail: 'assets/z47.webp', // iyd thumb.jpg
             class: 'brand-gaming',
             char: 'Z47'
         },
@@ -404,8 +404,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DFNWjp9tXEm/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Lifestyle vlog shorts, balancing quick dialogue transitions, voice levelling, and color grades.',
-            logo: 'assets/agasthya.png', // agasthya shah.jpeg
-            thumbnail: 'assets/extracted_img_p11_3.jpeg', // iyd thumb.jpg
+            logo: 'assets/agasthya.webp', // agasthya shah.jpeg
+            thumbnail: 'assets/extracted_img_p11_3.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Agst'
         },
@@ -416,8 +416,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/C9cHbBgvgjw/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Podcast highlights shorts, using keyframe screen overlays and auto-captions layout.',
-            logo: 'assets/ayush.png', // ayush.jpeg
-            thumbnail: 'assets/extracted_img_p12_2.jpeg', // iyd thumb.jpg
+            logo: 'assets/ayush.webp', // ayush.jpeg
+            thumbnail: 'assets/extracted_img_p12_2.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Ayh'
         },
@@ -428,8 +428,8 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DRUU_gIk089/'],
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Explainer reels detailing scientific paradoxes, matching motion paths graphics with flat color grades.',
-            logo: 'assets/theorist.png', // theorist.jpg
-            thumbnail: 'assets/theorist thumb.png', // iyd thumb.jpg
+            logo: 'assets/theorist.webp', // theorist.jpg
+            thumbnail: 'assets/theorist thumb.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Theo'
         }
@@ -578,7 +578,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const wasTrigger = e.target.closest('.desktop-icon') || 
                             e.target.closest('.dock-item') || 
                             e.target.closest('.bar-icon') || 
-                            e.target.closest('.mode-folder');
+                            e.target.closest('.mode-folder') ||
+                            e.target.closest('.menu-item') ||
+                            e.target.closest('.apple-logo');
         
         if (wasOutside && !wasTrigger) {
             closeWindow(activeWin.id);
@@ -1475,7 +1477,99 @@ if (dockAboutItem) {
 // ==========================================================================
 function initColorGradingSlider() {}
 function initAfterEffectsComp() {}
-function initTerminalShell() {}
+function initTerminalShell() {
+    const input = document.getElementById('terminal-input');
+    const screen = document.getElementById('terminal-screen');
+    if (!input || !screen) return;
+    
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const commandLine = input.value.trim();
+            input.value = '';
+            
+            if (commandLine === '') return;
+            
+            // Print user command line
+            const userRow = document.createElement('p');
+            userRow.innerHTML = `<span style="color: #00ff00;">lakshit-portfolio:~$</span> ${commandLine}`;
+            screen.appendChild(userRow);
+            
+            // Parse command and args
+            const tokens = commandLine.split(/\s+/);
+            const cmd = tokens[0].toLowerCase();
+            const args = tokens.slice(1);
+            
+            const response = document.createElement('div');
+            response.style.margin = '4px 0 10px 0';
+            
+            switch (cmd) {
+                case 'help':
+                    response.innerHTML = `
+                        <p style="color: #f5c518; font-weight: bold; margin-bottom: 4px;">Available Commands:</p>
+                        <p style="margin-left: 10px;">• <strong>help</strong> : Show this list of available commands</p>
+                        <p style="margin-left: 10px;">• <strong>about</strong> : Open the 'About Me' Finder panel</p>
+                        <p style="margin-left: 10px;">• <strong>projects</strong> : List all portfolio projects in current mode</p>
+                        <p style="margin-left: 10px;">• <strong>switch [longform|shortform]</strong> : Switch between editing modes</p>
+                        <p style="margin-left: 10px;">• <strong>dino</strong> : Open the Wifi offline Dino game popup</p>
+                        <p style="margin-left: 10px;">• <strong>system</strong> : Display System & Environment details</p>
+                        <p style="margin-left: 10px;">• <strong>clear</strong> : Clear the terminal screen buffer</p>
+                    `;
+                    break;
+                case 'about':
+                    response.innerHTML = `<p style="color: #74b9ff;">Opening 'About Me' panel...</p>`;
+                    if (window.openWindow) window.openWindow('window-about');
+                    break;
+                case 'dino':
+                    response.innerHTML = `<p style="color: #ff7675;">Launching offline Dino game...</p>`;
+                    if (window.openWifiGame) window.openWifiGame();
+                    break;
+                case 'clear':
+                    screen.innerHTML = '';
+                    return; // skip appending response container since screen is cleared
+                case 'projects':
+                    const list = PROJECTS[currentMode];
+                    let listHTML = `<p style="color: #f5c518; font-weight: bold;">Projects in ${currentMode.toUpperCase()} mode:</p>`;
+                    list.forEach(p => {
+                        listHTML += `<p style="margin-left: 10px;">• <strong>${p.name}</strong> - ${p.role}</p>`;
+                    });
+                    response.innerHTML = listHTML;
+                    break;
+                case 'switch':
+                    if (args.length === 0) {
+                        response.innerHTML = `<p style="color: #ff3b30;">Error: switch requires a mode name ('longform' or 'shortform').</p>`;
+                    } else {
+                        const targetMode = args[0].toLowerCase();
+                        if (targetMode === 'longform' || targetMode === 'shortform') {
+                            response.innerHTML = `<p style="color: #00ff00;">Switching workspace view to ${targetMode.toUpperCase()} mode...</p>`;
+                            if (window.switchMode) window.switchMode(targetMode);
+                        } else {
+                            response.innerHTML = `<p style="color: #ff3b30;">Error: Invalid mode '${targetMode}'. Choose either 'longform' or 'shortform'.</p>`;
+                        }
+                    }
+                    break;
+                case 'system':
+                    response.innerHTML = `
+                        <p><strong>OS:</strong> Macintosh System 7.5.3 (Classic Portfolio Edition)</p>
+                        <p><strong>CPU:</strong> Motorola 68040 @ 33 MHz</p>
+                        <p><strong>RAM:</strong> 128 MB (Virtual Memory Active)</p>
+                        <p><strong>Screen:</strong> Retro CRT 375x812 (Responsive Mobile Viewport)</p>
+                        <p><strong>Developer:</strong> Lakshit</p>
+                    `;
+                    break;
+                default:
+                    response.innerHTML = `<p style="color: #ff3b30;">Command not found: '${cmd}'. Type 'help' to see valid commands.</p>`;
+            }
+            
+            screen.appendChild(response);
+            
+            // Auto scroll to bottom
+            const parent = screen.parentElement;
+            if (parent) {
+                parent.scrollTop = parent.scrollHeight;
+            }
+        }
+    });
+}
 
 // ==========================================================================
 // 11. Low Battery Mode Toggle
