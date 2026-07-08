@@ -1671,9 +1671,9 @@ body.low-battery-active {
         position: fixed !important;
         bottom: 56px !important;
         top: auto !important;
-        left: calc(50% - 95px) !important;
+        left: calc(50% - 110px) !important;
         z-index: 100 !important;
-        transform: scale(0.92) !important;
+        transform: scale(1.2) !important;
         transform-origin: bottom center !important;
     }
     
@@ -1681,9 +1681,9 @@ body.low-battery-active {
         position: fixed !important;
         bottom: 56px !important;
         top: auto !important;
-        left: calc(50% + 5px) !important;
+        left: calc(50% + 15px) !important;
         z-index: 100 !important;
-        transform: scale(0.92) !important;
+        transform: scale(1.2) !important;
         transform-origin: bottom center !important;
     }
 
@@ -1747,9 +1747,9 @@ body.low-battery-active {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
         grid-template-rows: repeat(4, auto) !important;
-        row-gap: 18px !important;
+        row-gap: 14px !important;
         column-gap: 15px !important;
-        padding: 30px 20px 80px 20px !important;
+        padding: 70px 20px 40px 20px !important;
         box-sizing: border-box !important;
         justify-items: center !important;
         align-content: start !important;
@@ -1761,7 +1761,7 @@ body.low-battery-active {
         top: auto !important;
         left: auto !important;
         width: 100px !important;
-        height: 130px !important;
+        height: 95px !important;
         margin: 0 !important;
         transform: scale(0.95) !important;
         transform-origin: center !important;
