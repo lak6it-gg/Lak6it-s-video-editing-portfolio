@@ -296,7 +296,7 @@ const PROJECTS = {
             links: ['https://www.instagram.com/p/DL69cGKzq3l/'],
             softwares: ['Premiere', 'After Effects'],
             desc: 'Aesthetic street-fashion highlight reels. Handled color grade matching and visual sound sweeps.',
-            logo: 'assets/iyd.png', // Iyd.jpeg
+            logo: 'assets/Iyd.png', // Iyd.jpeg
             thumbnail: 'assets/extracted_img_p7_7.jpeg', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'IYD'
