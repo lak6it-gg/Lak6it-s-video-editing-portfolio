@@ -244,7 +244,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'Davinci Resolve'],
             desc: 'High-speed vertical chess stream digests. Synced reaction highlights, soundboards, and dynamic auto-captions.',
             logo: 'assets/samay.png', // samay.jpg
-            thumbnail: 'assets/extracted_img_p11_4.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/samay thumb.jpg', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'SmR'
         },
@@ -256,7 +256,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Official short-form promotional edits. Implemented kinetic typography grids, slick transition swipes, and sound effects.',
             logo: 'assets/yt.png', // yt.jpg
-            thumbnail: 'assets/extracted_img_p11_5.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/ytindia_thumb.jpg', // iyd thumb.jpg
             class: 'brand-youtube',
             char: 'YT'
         },
@@ -273,7 +273,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Men\'s grooming aesthetic promotional campaign. Balanced high-fashion pacing edits, tracking overlays, and glowing color LUTs.',
             logo: 'assets/nykaaman.png', // nykaaman.webp
-            thumbnail: 'assets/extracted_img_p7_7.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/nyka thumb.jpg', // iyd thumb.jpg
             class: 'brand-netflix',
             char: 'Nyk'
         },
@@ -321,7 +321,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'FinTech short case studies reels, combining custom financial charts and motion graphs.',
             logo: 'assets/mesa.png', // mesa-shcool.jpg
-            thumbnail: 'assets/extracted_img_p8_9.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/mesa thumb.png', // iyd thumb.jpg
             class: 'brand-generic',
             char: 'Mesa'
         },
@@ -333,7 +333,7 @@ const PROJECTS = {
             softwares: ['Davinci Resolve'],
             desc: 'Promotional real estate clip color grades. Balanced outdoor sunlight shadows and saturated highlight detail.',
             logo: 'assets/gcl.png', // gcl.jpeg
-            thumbnail: 'assets/extracted_img_p10_9.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/gcl thumb.jpg', // iyd thumb.jpg
             class: 'brand-generic',
             char: 'GCL'
         },
@@ -345,7 +345,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Radio talk show visual summaries, matching audio waveforms with custom subtitle typography.',
             logo: 'assets/rj dheeraj.png', // rj dheeraj.jpeg
-            thumbnail: 'assets/extracted_img_p13_7.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/dheeraj thumb.jpg', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'RJD'
         },
@@ -357,7 +357,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'High-tempo music concert recap cut, syncing key frame lens flares and bass drop transitions.',
             logo: 'assets/darshan.png', // darshan.jpg
-            thumbnail: 'assets/extracted_img_p13_9.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/darshan thumb.jpg', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Drn'
         },
@@ -369,7 +369,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'VYRE mobile-first explanation reels, focusing on dopamine loop marketing and consumer psychology.',
             logo: 'assets/vyre.png', // vyre logo white blue.png
-            thumbnail: 'assets/extracted_img_p3_7.jpeg', // iyd thumb.jpg
+            thumbnail: 'assets/vyre thumb.png', // iyd thumb.jpg
             class: 'brand-vyre',
             char: 'Vyre'
         },
@@ -393,7 +393,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects'],
             desc: 'Matrix Moments interview reels, detailing startup investments with animated title slides.',
             logo: 'assets/z47.png', // z47.png
-            thumbnail: 'assets/color_after.png', // iyd thumb.jpg
+            thumbnail: 'assets/z47.png', // iyd thumb.jpg
             class: 'brand-gaming',
             char: 'Z47'
         },
@@ -429,7 +429,7 @@ const PROJECTS = {
             softwares: ['Premiere', 'After Effects', 'Davinci Resolve'],
             desc: 'Explainer reels detailing scientific paradoxes, matching motion paths graphics with flat color grades.',
             logo: 'assets/theorist.png', // theorist.jpg
-            thumbnail: 'assets/color_after.png', // iyd thumb.jpg
+            thumbnail: 'assets/theorist thumb.png', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Theo'
         }
