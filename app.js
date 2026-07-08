@@ -485,6 +485,32 @@ for (const mode in PROJECTS) {
     });
 }
 
+// Agency Mapping based on provided list
+const AGENCY_MAPPING = {
+    // Perception Media
+    'jesser': 'Perception Media',
+    'endgame-ai': 'Perception Media',
+    'nykaaman': 'Perception Media',
+    'masters-union': 'Perception Media',
+    'gcl': 'Perception Media',
+    'samay-raina': 'Perception Media',
+    'amazon-prime': 'Perception Media',
+    'theorist': 'Perception Media',
+    'youtube-india': 'Perception Media',
+    
+    // Revolio Media
+    'mesa-long': 'Revolio Media',
+    'mesa-short': 'Revolio Media',
+    'iyd': 'Revolio Media'
+};
+
+// Inject agency property into PROJECTS database objects dynamically
+for (const mode in PROJECTS) {
+    PROJECTS[mode].forEach(proj => {
+        proj.agency = AGENCY_MAPPING[proj.id] || null;
+    });
+}
+
 let activeFilter = 'all';
 
 function setProjectFilter(filterType) {
@@ -821,13 +847,14 @@ function openProjectDetails(projId) {
         container.innerHTML = `
             <div class="vertical-monitor-wrapper">
                 <div class="video-mock-container vertical-monitor clickable-monitor-thumbnail" onclick="playActiveProject()">
-                    <img src="${proj.thumbnail}" alt="${proj.name}" class="monitor-thumbnail-img" onerror="this.src='assets/color_after.png';">
+                    <img src="${proj.thumbnail}" alt="${proj.name}" class="monitor-thumbnail-img" onerror="this.src='assets/color_after.webp';">
                     <div class="play-icon-overlay-badge"><i class="fa-solid fa-play"></i></div>
                 </div>
             </div>
             <div class="vertical-meta-wrapper">
                 <h3 class="proj-title">${proj.name}</h3>
                 <div class="video-badge" style="margin-bottom:8px;"><span class="role-text">${proj.role}</span></div>
+                ${proj.agency ? `<div class="agency-badge-row" style="margin-bottom:10px; font-size:11px; font-weight:bold; color:#777;">Agency: <span style="color:#000; font-weight:900;">${proj.agency}</span></div>` : ''}
                 <p class="proj-desc">${proj.desc}</p>
                 <div class="links-grid" id="project-multi-links" style="display:flex; flex-direction:column; gap:6px; margin-top:10px;">
                     <!-- Loaded below -->
@@ -841,6 +868,7 @@ function openProjectDetails(projId) {
             <div class="horizontal-meta-wrapper">
                 <h3 class="proj-title">${proj.name}</h3>
                 <div class="video-badge" style="margin-bottom:12px;"><span class="role-text">${proj.role}</span></div>
+                ${proj.agency ? `<div class="agency-badge-row" style="margin-bottom:10px; font-size:11px; font-weight:bold; color:#777;">Agency: <span style="color:#000; font-weight:900;">${proj.agency}</span></div>` : ''}
                 <p class="proj-desc" style="max-height:170px; overflow-y:auto; font-size:11.5px; line-height:1.4;">${proj.desc}</p>
                 <div class="links-grid" id="project-multi-links" style="margin-top:15px; display:flex; flex-direction:column; gap:8px;">
                     <!-- Loaded below -->
@@ -848,7 +876,7 @@ function openProjectDetails(projId) {
             </div>
             <div class="horizontal-monitor-wrapper">
                 <div class="video-mock-container horizontal-monitor clickable-monitor-thumbnail" onclick="playActiveProject()">
-                    <img src="${proj.thumbnail}" alt="${proj.name}" class="monitor-thumbnail-img" onerror="this.src='assets/color_after.png';">
+                    <img src="${proj.thumbnail}" alt="${proj.name}" class="monitor-thumbnail-img" onerror="this.src='assets/color_after.webp';">
                     <div class="play-icon-overlay-badge"><i class="fa-solid fa-play"></i></div>
                 </div>
             </div>
@@ -900,7 +928,7 @@ function playActiveProject() {
         
         document.getElementById('video-modal-title').textContent = activeProject.name;
         document.getElementById('cinema-header-title').textContent = activeProject.name;
-        document.getElementById('cinema-client').textContent = `Role: ${activeProject.role}`;
+        document.getElementById('cinema-client').textContent = activeProject.agency ? `Role: ${activeProject.role} (${activeProject.agency})` : `Role: ${activeProject.role}`;
         document.getElementById('cinema-role').textContent = activeProject.softwares.join(' + ');
         document.getElementById('cinema-desc').textContent = activeProject.desc;
         
