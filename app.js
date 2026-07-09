@@ -919,7 +919,7 @@ function playActiveProject() {
     if (!activeProject) return;
     
     // Direct link redirection
-    if (activeProject.links.length === 1) {
+    if (activeProject.links.length === 1 || activeProject.id === 'nykaaman') {
         window.open(activeProject.links[0], '_blank');
     } else {
         // Multi links popup fallback

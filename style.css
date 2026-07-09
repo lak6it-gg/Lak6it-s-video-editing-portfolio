@@ -311,31 +311,35 @@ body.low-battery-active {
 
 /* Dynamic Project Brands Icon Wrappers */
 .brand-icon-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 18px;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    border: 1.5px solid var(--color-border-dark);
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 800 !important;
+    font-size: 18px !important;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2) !important;
+    border: 2px solid var(--color-border-dark) !important;
     background-color: #fff;
-    margin-bottom: 2px;
+    margin-bottom: 6px !important;
+    overflow: hidden !important;
 }
 
 /* Special Custom Brand Styles */
-.brand-netflix { background-color: #ffffff; color: #fff; }
-.brand-youtube { background-color: #ffffff; color: #ff0000; }
-.brand-amazon { background-color: #151a21; color: #ff9900; }
-.brand-imdb { background-color: #f5c518; color: #000; }
-.brand-vyre { background-color: #5c4033; color: #f7ebe1; }
-.brand-gaming { background-color: #74b9ff; color: #fff; }
-.brand-creative { background-color: #05c46b; color: #fff; }
-.brand-ai { background-color: #a55eea; color: #fff; }
-.brand-film { background-color: #ff7675; color: #fff; }
-.brand-generic { background-color: #f5f3ef; color: #333; }
+.brand-netflix { background-color: #ffffff !important; color: #fff !important; }
+.brand-youtube { background-color: #ffffff !important; color: #ff0000 !important; }
+.brand-amazon { background-color: #151a21 !important; color: #ff9900 !important; }
+.brand-imdb { background-color: #f5c518 !important; color: #000 !important; }
+.brand-vyre { background-color: #5c4033 !important; color: #f7ebe1 !important; }
+.brand-gaming { background-color: #74b9ff !important; color: #fff !important; }
+.brand-creative { background-color: #05c46b !important; color: #fff !important; }
+.brand-ai { background-color: #a55eea !important; color: #fff !important; }
+.brand-film { background-color: #ff7675 !important; color: #fff !important; }
+.brand-generic { background-color: #f5f3ef !important; color: #333 !important; }
 
 /* ==========================================================================
    macOS Classic Windows UI (Platinum Style)
@@ -1750,7 +1754,7 @@ body.low-battery-active {
         grid-template-rows: repeat(4, auto) !important;
         row-gap: 14px !important;
         column-gap: 15px !important;
-        padding: 70px 20px 40px 20px !important;
+        padding: 70px 20px 120px 20px !important;
         box-sizing: border-box !important;
         justify-items: center !important;
         align-content: start !important;
@@ -1782,6 +1786,20 @@ body.low-battery-active {
         height: 54px !important;
         border-radius: 10px !important;
         margin-bottom: 6px !important;
+        box-sizing: border-box !important;
+        border: 2.2px solid var(--color-border-dark) !important;
+        background-color: #fff;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        overflow: hidden !important;
+    }
+
+    .scattered-projects-grid .desktop-icon .desktop-brand-logo {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 8px !important;
     }
     
     .scattered-projects-grid .desktop-icon .icon-label {
@@ -1792,7 +1810,7 @@ body.low-battery-active {
     }
     
     .scattered-projects-grid .large-desktop-icon {
-        transform: scale(1.15) !important;
+        transform: scale(0.95) !important;
     }
 
     /* Stacking project preview layout vertically on mobile */
