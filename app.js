@@ -508,7 +508,10 @@ const AGENCY_MAPPING = {
     'slayy-point': 'Beebuzz Media',
     'tribe-gaming': 'Beebuzz Media',
     'tech-burner': 'Beebuzz Media',
-    'z47-moments': 'Beebuzz Media'
+    'z47-moments': 'Beebuzz Media',
+
+    // 222 Productions
+    'imdb': '222 Productions'
 };
 
 // Inject agency property into PROJECTS database objects dynamically
