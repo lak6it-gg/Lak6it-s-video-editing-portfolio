@@ -249,6 +249,30 @@ const PROJECTS = {
             char: 'SmR'
         },
         {
+            id: 'Truefan',
+            name: 'Truefan',
+            role: 'Video Editor',
+            links: ['https://www.instagram.com/p/DaVrE4mh9cR/'],
+            softwares: ['Premiere', 'Davinci Resolve'],
+            desc: 'Advertisment collab for Truefan by Siddharth Sethi',
+            logo: 'assets/truefan.webp', // 
+            thumbnail: 'assets/truefan thum.webp', // 
+            class: 'brand-creative',
+            char: 'SmR'
+        },
+        {
+            id: 'BEV Iced Tea',
+            name: 'BEV Iced Tea',
+            role: 'Sound Desginer',
+            links: ['https://www.instagram.com/reel/DaP_LqDNZop/'],
+            softwares: ['Premiere', 'Davinci Resolve'],
+            desc: 'Worked as a Sound Designer and Assistant Editor',
+            logo: 'assets/bev.webp', // 
+            thumbnail: 'assets/bev thum.webp', // 
+            class: 'brand-bev',
+            char: 'SmR'
+        },
+        {
             id: 'youtube-india',
             name: 'Youtube India',
             role: 'Video Editor',
