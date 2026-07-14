@@ -9,7 +9,7 @@ const PROJECTS = {
             id: 'netflix-india',
             name: 'Netflix India',
             role: 'Online Editor',
-            links: ['https://www.youtube.com/watch?v=qD1S_pEa6v0'],
+            links: ['https://www.youtube.com/playlist?list=PLwjLif3y8Kn-dLJslw-BMvlDS752r9pCn'],
             softwares: ['Premiere'],
             desc: 'Collaborative promotional review and comedy edit series featuring Tanmay Bhat. Synced multi-cam setup with fast pacing and dialogue accents.',
             logo: 'assets/netflix_logo.webp', // netflix.webp
@@ -501,7 +501,14 @@ const AGENCY_MAPPING = {
     // Revolio Media
     'mesa-long': 'Revolio Media',
     'mesa-short': 'Revolio Media',
-    'iyd': 'Revolio Media'
+    'iyd': 'Revolio Media',
+    'aspora': 'Revolio Media',
+
+    // Beebuzz Media
+    'slayy-point': 'Beebuzz Media',
+    'tribe-gaming': 'Beebuzz Media',
+    'tech-burner': 'Beebuzz Media',
+    'z47-moments': 'Beebuzz Media'
 };
 
 // Inject agency property into PROJECTS database objects dynamically
@@ -698,8 +705,8 @@ function drawScatteredDesktopIcons() {
     const largeProjects = ['netflix-india', 'amazon-prime', 'imdb', 'youtube-india', 'samay-raina', 'slayy-point', 'nykaaman', 'tech-burner'];
     
     if (isMobile) {
-        // Mobile Page Grid (12 apps per page, 3 columns x 4 rows)
-        const appsPerPage = 12;
+        // Mobile Page Grid (9 apps per page, 3 columns x 3 rows)
+        const appsPerPage = 9;
         const pagesCount = Math.ceil(projectsList.length / appsPerPage);
         
         for (let p = 0; p < pagesCount; p++) {

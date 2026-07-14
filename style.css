@@ -1751,7 +1751,7 @@ body.low-battery-active {
         height: 100% !important;
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        grid-template-rows: repeat(4, auto) !important;
+        grid-template-rows: repeat(3, auto) !important;
         row-gap: 14px !important;
         column-gap: 15px !important;
         padding: 70px 20px 120px 20px !important;
