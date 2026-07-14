@@ -497,6 +497,8 @@ const FILTERS_MAPPING = {
     
     // Shortform
     'samay-raina': ['highlights'],
+    'Truefan': ['high-prod'],
+    'BEV Iced Tea': ['high-prod'],
     'youtube-india': ['highlights'],
     'nykaaman': ['highlights', 'motion-graphics'],
     'slayy-point': ['highlights'],
