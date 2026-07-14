@@ -432,6 +432,18 @@ const PROJECTS = {
             thumbnail: 'assets/theorist thumb.webp', // iyd thumb.jpg
             class: 'brand-creative',
             char: 'Theo'
+        },
+        {
+            id: 'vivo-india',
+            name: 'Vivo India',
+            role: 'Video Editor',
+            links: ['https://drive.google.com/drive/folders/17Z41PRHoeU9MKzXfMjItH1qd6snQOXo4?usp=sharing'],
+            softwares: ['Premiere', 'After Effects'],
+            desc: 'Live editing Stories for the Vivo India page.',
+            logo: 'assets/vivo.webp',
+            thumbnail: 'assets/Vivo thumb.webp',
+            class: 'brand-vivo',
+            char: 'V'
         }
     ]
 };
@@ -475,7 +487,8 @@ const FILTERS_MAPPING = {
     'z47-moments': ['documentary', 'motion-graphics'],
     'agastya-short': ['highlights'],
     'ayush-short': ['documentary', 'motion-graphics'],
-    'theorist': ['documentary', 'motion-graphics']
+    'theorist': ['documentary', 'motion-graphics'],
+    'vivo-india': ['highlights']
 };
 
 // Inject filters property into PROJECTS database objects dynamically
@@ -497,6 +510,7 @@ const AGENCY_MAPPING = {
     'amazon-prime': 'Perception Media',
     'theorist': 'Perception Media',
     'youtube-india': 'Perception Media',
+    'vivo-india': 'Perception Media',
     
     // Revolio Media
     'mesa-long': 'Revolio Media',
